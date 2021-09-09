@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="imodel.css">
     <link rel="stylesheet" href="ui.css">
     <link rel="stylesheet" href="canvas.css">
+    <link rel="stylesheet" href="game1.css">
     <!-- <link rel="stylesheet" href="slider.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +28,29 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Project</title>
+    <style>
+        html,
+        body {
+            min-width: 80%;
+            min-height: 80%;
+        }
+        
+        body {
+            background-color: rgb(216, 216, 216);
+            background-image: url(invertedbg1.png);
+            background-image: url(invertedbg.png);
+            background-position: center;
+            background-size: 100% 100%;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
     <!-- Navigarion Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary  pt-0 pb-0">
+    <nav class="navbar navbar-expand-md navbar-light bg-light  pt-0 pb-0">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><span class="badge  bg-dark">TUSHAR</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,10 +88,30 @@
     </nav>
 
 
+    <div class="bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+            <h2 class="display-5">Simple HTML Products</h2>
+            <p class="lead">Little CSS and Some JS</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
 
-    <div class="d-flex flex-row">
+            <img src="welcome.jpg" alt="">
 
-        <div class="card ms-2" style="width: 18rem;">
+
+        </div>
+    </div>
+    <hr style="margin-top:-55px;">
+
+    <center>
+
+        <h1><span class="badge bg-danger">Modal Here</span> Saved in Card's buttons</h1>
+    </center>
+
+
+
+    <div class="d-flex flex-row mt-5 mb-5">
+
+        <div class="card ms-2  " style="width: 18rem;">
             <img src="box-1.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Slide-Show</h5>
@@ -80,7 +119,7 @@
                 <a href="#" class="btn btn-primary  " id="ss">Click-open</a>
             </div>
         </div>
-        <div class="card ms-2" style="width: 18rem;">
+        <div class="card ms-2 text-white bg-success " style="width: 18rem;">
             <img src="Box-2.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Simple-form</h5>
@@ -96,7 +135,7 @@
                 <a href="#" class="btn btn-primary mb-0  " id="hb">Click-open</a>
             </div>
         </div>
-        <div class="card ms-2" style="width: 18rem;">
+        <div class="card ms-2 text-white bg-success " style="width: 18rem;">
             <img src="Box-4.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Music Box</h5>
@@ -112,7 +151,7 @@
                 <a href="#" class="btn btn-primary mb-0 mt-3" id="nb">Click-open</a>
             </div>
         </div>
-        <div class="card ms-2" style="width: 18rem;">
+        <div class="card ms-2 text-white bg-success " style="width: 18rem;">
             <img src="Box-6.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Instagram-us</h5>
@@ -416,34 +455,103 @@
             <button style="border-radius: 15px; width: 40px;height: 30px; background-color: #fff; top: 0%; border: none;    margin: -18px 8px 407px" id="ui-close"><i class="fa fa-close" ></i></button>
         </div>
     </div>
+    <!-- ===============================// Slider\\==================================== -->
+    <center>
 
-    <!-- <div class="container">
+        <h1><span class="badge bg-danger">Cleck the Cards</span> Inside Sliders</h1>
+
+    </center>
+
+
+
+
+    <div class="container container-bg-transparent	">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="Slider-1.jpg" height="600px" class="d-block w-100" alt="...">
+                    <img src="G.jpg" height="600px" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <div class="card text-light bg-transparent" style="width: 18rem; margin-left: 450px ; margin-bottom: 140px;">
+                            <img src="G1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sling-Shot</h5>
+                                <p class="card-text">Simple Sling Shot Game. Each button render object one time.<b>"Strach Ball-Sling and PLAY"</b></p>
+                                <a href="#" class="btn btn-danger" onclick="game1()">PLAY</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="slider-4.jpg" height="600px" class="d-block w-100" alt="...">
+                    <img src="G3.jpg" height="600px" class="d-block w-100" alt="...">
+
+
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <div class="card text-light bg-primary " style="width: 18rem;  margin-left: 450px ; margin-bottom: 40px;">
+                            <img src="G2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fs-3">Plinko</h5>
+                                <p class="card-text  "> It is Plinko game. you can click or strach the ball on the top. <b>hope for ball to go in red box</b></p>
+                                <a href="#" class="btn btn-danger" onclick="game2()">PLAY</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
                 </div>
-                <div class="carousel-item">
-                    <img src="Slider-3.jpg" height="600px" class="d-block w-100" alt="...">
-                </div>
+
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" style="background-color: #00000071;
+            border: solid 3px white;" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" style="background-color: #00000079;
+            border: solid 3px white;" data-bs-target="#carouselExampleFade" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
         </div>
 
-    </div> -->
+    </div>
 
 
 
+    <br>
+
+    <!-- ================================\\Footer//============================================================================= -->
+    <div class="container">
+
+
+        <div class="col-4 offset-1">
+            <form>
+                <br>
+                <h5>Thanks for Visit</h5>
+                <p>Please Leave your name or Something to identidy</p>
+                <div class="d-flex w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Anything</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Anything">
+                    <button class="btn btn-primary" type="button"> Then click here </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="d-flex  justify-content-center bg-primary text-white py-4 mt-4 mb-0">
+        <p>© 2021 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+    </div>
+    </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="index.js"></script>

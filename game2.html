@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(27, 27, 27);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script src=" matter.js"></script>
+
+
+    <script>
+        var Engine = Matter.Engine,
+            Render = Matter.Render,
+            Runner = Matter.Runner,
+            Body = Matter.Body,
+
+            Events = Matter.Events,
+            Composite = Matter.Composite,
+            Composites = Matter.Composites,
+            Constraint = Matter.Constraint,
+            MouseConstraint = Matter.MouseConstraint,
+            Mouse = Matter.Mouse,
+            Bodies = Matter.Bodies;
+
+
+
+        // create an engine
+        var engine = Engine.create();
+
+        world = engine.world;
+
+        // create a renderer
+        var render = Render.create({
+            element: document.body,
+            engine: engine,
+            options: {
+                width: 1100,
+                height: 750,
+                wireframes: false
+            }
+        });
+
+
+
+
+
+
+        //  Ground
+        // var ground = Bodies.rectangle(600, 400, 400, 20, {
+        //     isStatic: true
+        // });
+
+
+        // create mouse constrain
+        var mouse = Mouse.create(render.canvas),
+            mouseConstraint = MouseConstraint.create(engine, {
+                mouse: mouse,
+                constraint: {
+                    stiffness: 0.2,
+                    render: {
+                        visible: false
+                    }
+                }
+            });
+
+        Composite.add(world, mouseConstraint);
+
+
+
+
+        // // bullets
+
+        var rockOptions = {
+                density: 0.004,
+                frictionAir: 0.001,
+                restitution: 1,
+                firction: 0,
+            },
+            rock = Bodies.polygon(400, 70, 20, 8, rockOptions),
+            anchor = {
+                x: 400,
+                y: 70
+            },
+            elastic = Constraint.create({
+                pointA: anchor,
+                bodyB: rock,
+                stiffness: 0.5
+            });
+        let firing = false;
+        Events.on(mouseConstraint, 'enddrag', function(e) {
+            if (e.body === rock) firing = true;
+        });
+
+
+        Events.on(engine, 'afterUpdate', function() {
+
+            if (firing || mouseConstraint.mouse.button === 1 && (rock.position.x > 430 || rock.position.y < 100)) {
+                rock = Bodies.polygon(400, 70, 20, 8, rockOptions);
+
+
+                //here...............................................................
+                Composite.add(engine.world, rock);
+                elastic.bodyB = rock;
+                firing = false;
+
+            }
+        });
+
+        //==================================================================================================================================
+
+
+        var rockOptions1 = {
+                density: 0.004,
+                frictionAir: 0.001,
+                restitution: 1,
+                firction: 0,
+
+            },
+            rock1 = Bodies.polygon(800, 70, 20, 7, rockOptions1),
+            anchor1 = {
+                x: 800,
+                y: 70
+            },
+            elastic1 = Constraint.create({
+                pointA: anchor1,
+                bodyB: rock1,
+                stiffness: 0.5
+            });
+        let firing1 = false;
+        Events.on(mouseConstraint, 'enddrag', function(e) {
+            if (e.body === rock1) firing1 = true;
+        });
+
+
+        Events.on(engine, 'afterUpdate', function() {
+
+            if (firing1 || mouseConstraint.mouse.button === 1 && (rock1.position.x > 830 || rock1.position.y < 100)) {
+                rock1 = Bodies.polygon(800, 70, 20, 7, rockOptions1);
+
+
+                //here...............................................................
+                Composite.add(engine.world, rock1);
+                elastic1.bodyB = rock1;
+                firing1 = false;
+
+            }
+        });
+
+        //0----155 W(3)
+        //-----------------------------------------------------------------------------------------------------------------------------------------
+
+        let stack1 = Matter.Composites.stack(50, 200, 28, 8, 35, 45, function(x, y) {
+
+            return Matter.Bodies.polygon(x, y, 10, 5, {
+                isStatic: true,
+                restitution: 1,
+                firction: 0,
+                render: {
+                    fillStyle: 'white',
+                    strokeStyle: 'white',
+                    lineWidth: 3
+                }
+            });
+        })
+        Composite.add(engine.world, stack1);
+
+
+
+        let B2 = Matter.Composites.stack(50, 600, 6, 1, 150, 0, function(x, y) {
+
+            return Matter.Bodies.rectangle(x, y, 30, 155, {
+                isStatic: true,
+                render: {
+                    fillStyle: 'blue',
+                    strokeStyle: 'blue',
+                    lineWidth: 3
+                }
+            });
+        })
+        let B3 = Matter.Composites.stack(60, 725, 3, 1, 180, 0, function(x, y) {
+
+            return Matter.Bodies.rectangle(x, y, 185, 30, {
+                isStatic: true,
+                render: {
+                    fillStyle: 'red',
+                    strokeStyle: 'blue',
+                    lineWidth: 3
+                }
+            });
+        })
+        Composite.add(engine.world, B2);
+        Composite.add(engine.world, B3);
+
+
+        //onstocal1==================================================================================================
+        // let obstcl = Matter.Composites.stack(80, 350, 10, 2, 95, 140, function(x, y) {
+
+        //     return Matter.Bodies.polygon(x, y, 3, 15, {
+        //         isStatic: true,
+        //         render: {
+        //             fillStyle: 'red',
+        //             strokeStyle: 'red',
+        //             lineWidth: 5
+        //         }
+        //     });
+        // })
+        // Composite.add(engine.world, obstcl);
+
+
+        //obstical 2========================================================================================
+        // let obstcl2 = Matter.Composites.stack(70, 220, 15, 5, 50, 80, function(x, y) {
+
+        //     return Matter.Bodies.polygon(x, y, 3, 7, {
+        //         isStatic: true,
+        //         render: {
+        //             fillStyle: 'yellow',
+        //             strokeStyle: 'yellow',
+        //             lineWidth: 3
+        //         }
+        //     });
+        // })
+        // Composite.add(engine.world, obstcl2);
+
+
+        var c = Matter.Composites.stack(70, 225, 15, 7, 70, 35, (x, y) => {
+                return Matter.Bodies.polygon(x, y, 8, 10, {
+                    isStatic: true,
+
+                    Math: Math.PI / 6,
+                    inertia: Infinity,
+                    render: {
+                        fillStyle: 'yellow',
+                        strokeStyle: 'yellow',
+                        lineWidth: 3,
+                        setAngle: 5,
+
+                    },
+                });
+
+            })
+            // setInterval(() => {
+            // Body.setAngularVelocity(c[243], Math.PI / 6);
+        console.log(c);
+        // }, 5000);
+
+        Composite.add(engine.world, c);
+
+        var hexagon = Bodies.polygon(390, 300, 3, 20, {
+            isStatic: true,
+            inertia: Infinity, // setting inertia to infinty will prevent rotation upon collision
+            rotationSpeed: 20,
+
+            render: {
+                fillStyle: 'red',
+                strokeStyle: 'red',
+                lineWidth: 3,
+
+
+            },
+        });
+
+
+
+        Composite.add(engine.world, hexagon);
+
+        function updateRotation() {
+            Matter.Body.setAngle(hexagon, hexagon.angle + hexagon.rotationSpeed);
+            requestAnimationFrame(updateRotation);
+        }
+        window.requestAnimationFrame(updateRotation);
+
+
+
+        //=============================================================================
+        var hexagon1 = Bodies.polygon(210, 300, 3, 20, {
+            isStatic: true,
+            inertia: Infinity, // setting inertia to infinty will prevent rotation upon collision
+            rotationSpeed: 20,
+            render: {
+                fillStyle: 'green',
+                strokeStyle: 'green',
+                lineWidth: 3,
+                setAngle: 5,
+
+            }, // Optional - you could substitute hexagon.rotationSpeed in updateRotation() with this number
+        });
+
+        Composite.add(engine.world, hexagon1);
+
+        function updateRotation1() {
+            Matter.Body.setAngle(hexagon1, hexagon1.angle + hexagon1.rotationSpeed);
+            requestAnimationFrame(updateRotation1);
+        }
+        window.requestAnimationFrame(updateRotation1);
+        //=============================================================================
+        var hexagon3 = Bodies.polygon(570, 300, 3, 20, {
+            isStatic: true,
+            inertia: Infinity, // setting inertia to infinty will prevent rotation upon collision
+            rotationSpeed: 20,
+            render: {
+                fillStyle: 'skyblue',
+                strokeStyle: 'skyblue',
+                lineWidth: 3,
+                setAngle: 5,
+
+            }, // Optional - you could substitute hexagon.rotationSpeed in updateRotation() with this number
+        });
+
+        Composite.add(engine.world, hexagon3);
+
+        function updateRotation3() {
+            Matter.Body.setAngle(hexagon3, hexagon3.angle + hexagon3.rotationSpeed);
+            requestAnimationFrame(updateRotation3);
+        }
+        window.requestAnimationFrame(updateRotation3);
+        //========================================================================================
+        var hexagon4 = Bodies.polygon(740, 300, 3, 20, {
+            isStatic: true,
+            inertia: Infinity, // setting inertia to infinty will prevent rotation upon collision
+            rotationSpeed: 20,
+            render: {
+                fillStyle: 'pink',
+                strokeStyle: 'pink',
+                lineWidth: 3,
+                setAngle: 5,
+
+            }, // Optional - you could substitute hexagon.rotationSpeed in updateRotation() with this number
+        });
+
+        Composite.add(engine.world, hexagon4);
+
+        function updateRotation4() {
+            Matter.Body.setAngle(hexagon4, hexagon4.angle + hexagon4.rotationSpeed);
+            requestAnimationFrame(updateRotation4);
+        }
+        window.requestAnimationFrame(updateRotation4);
+        //========================================================================================
+        var hexagon5 = Bodies.polygon(920, 300, 3, 20, {
+            isStatic: true,
+            inertia: Infinity, // setting inertia to infinty will prevent rotation upon collision
+            rotationSpeed: 20,
+            render: {
+                fillStyle: 'yellow',
+                strokeStyle: 'yellow',
+                lineWidth: 3,
+                setAngle: 55
+
+            }, // Optional - you could substitute hexagon.rotationSpeed in updateRotation() with this number
+        });
+
+        Composite.add(engine.world, hexagon5);
+
+        function updateRotation5() {
+            Matter.Body.setAngle(hexagon5, hexagon5.angle + hexagon5.rotationSpeed);
+            requestAnimationFrame(updateRotation5);
+        }
+        window.requestAnimationFrame(updateRotation5);
+
+
+
+
+
+
+
+
+
+
+
+
+        // add all of the bodies to the world
+        Composite.add(engine.world, [hexagon, elastic, anchor, rock, elastic1, anchor1, rock1]);
+
+        // run the renderer
+        Render.run(render);
+
+        // create runner
+        var runner = Runner.create();
+
+        // run the engine
+        Runner.run(runner, engine);
+    </script>
+</body>
+
+</html>

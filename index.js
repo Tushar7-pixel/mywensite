@@ -65,17 +65,18 @@ images[2] = "slider-2.jpg";
 images[0] = "slider-3.jpg";
 images[3] = "slider-4.jpg";
 
-// image changing   function
-setInterval(() => {
-    if (i < images.length) {
-        document.getElementById("i1").src = images[i];
+setTimeout(() => {
+    // image changing   function
+    setInterval(() => {
+        if (i < images.length) {
+            document.getElementById("i1").src = images[i];
 
-        i++;
-    } else {
-        i = 0;
-    }
-}, interval);
-
+            i++;
+        } else {
+            i = 0;
+        }
+    }, interval);
+}, 100);
 // mMusic bar Function
 
 function Musicbar() {
@@ -135,3 +136,11 @@ document.getElementById("n3").addEventListener("mouseleave", () => {
 });
 
 // for canvas game
+
+function game1() {
+    var myWindow = window.open("game1.html", "Game", "width=1140,height=500");
+}
+
+function game2() {
+    var myWindow = window.open("game2.html", "Game", "width=1100,height=1500");
+}

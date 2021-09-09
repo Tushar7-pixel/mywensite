@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="canvas.css"> -->
+
+    <style>
+        body {
+            background-color: rgb(53, 53, 53);
+        }
+        
+        .b1 {
+            margin-top: 40px;
+            border-radius: 10px;
+            float: right;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(238, 255, 0);
+            color: white;
+            border: solid;
+            cursor: pointer;
+        }
+        
+        .b2 {
+            margin-top: 40px;
+            border-radius: 10px;
+            float: right;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(255, 0, 0);
+            color: white;
+            border: solid;
+            cursor: pointer;
+            height: 57px;
+            overflow: hidden;
+        }
+        
+        .b3 {
+            margin-top: 40px;
+            border-radius: 10px;
+            float: right;
+            width: fit-content;
+            height: fit-content;
+            background-color: rgb(30, 255, 0);
+            color: white;
+            border: solid;
+            cursor: pointer;
+        }
+        
+        .buttons {
+            margin: 5pc 0;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            padding: 3px;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+
+
+
+<script src="matter.js"></script>
+
+<body>
+
+    <script>
+        var Engine = Matter.Engine,
+            Render = Matter.Render,
+            Runner = Matter.Runner,
+            Body = Matter.Body,
+            Bodies = Matter.Bodies,
+            Events = Matter.Events,
+            Composite = Matter.Composite,
+            Composites = Matter.Composites,
+            Constraint = Matter.Constraint,
+            MouseConstraint = Matter.MouseConstraint,
+            Mouse = Matter.Mouse,
+            Bodies = Matter.Bodies;
+
+
+
+        // create an engine
+        var engine = Engine.create();
+
+        world = engine.world;
+
+        // create a renderer
+        var render = Render.create({
+            element: document.body,
+            engine: engine,
+            options: {
+                width: 1000,
+                height: 600,
+                wireframes: false
+            }
+        });
+
+
+
+
+
+
+        //  Ground
+        var ground = Bodies.rectangle(800, 650, 400, 500, {
+            isStatic: true,
+            render: {
+                fillStyle: '#966F33',
+                strokeStyle: 'yellow',
+                lineWidth: 3
+            }
+        });
+
+
+        var obstical = Bodies.rectangle(450, 220, 30, 200, {
+            isStatic: true,
+            render: {
+                fillStyle: 'red',
+                strokeStyle: 'red',
+                lineWidth: 3
+            }
+        });
+
+        Composite.add(world, obstical);
+
+
+
+
+
+
+
+        var obstical1 = Bodies.rectangle(350, 40, 700, 30, {
+            isStatic: true,
+            restitution: 1,
+            firction: 0,
+            render: {
+                fillStyle: 'blue',
+                strokeStyle: 'blue',
+                lineWidth: 3
+            }
+        });
+
+        Composite.add(world, obstical1);
+
+
+        var obstical2 = Bodies.rectangle(220, 400, 580, 30, {
+            isStatic: true,
+            restitution: 1,
+            firction: 0,
+            render: {
+                fillStyle: 'blue',
+                strokeStyle: 'blue',
+                lineWidth: 3
+            }
+        });
+
+        Composite.add(world, obstical2);
+
+        var backwall = Bodies.rectangle(10, 210, 20, 350, {
+            isStatic: true,
+            render: {
+                fillStyle: 'blue',
+                strokeStyle: 'blue',
+                lineWidth: 3
+            }
+        });
+
+        Composite.add(world, backwall);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // create mouse constrain
+        var mouse = Mouse.create(render.canvas),
+            mouseConstraint = MouseConstraint.create(engine, {
+                mouse: mouse,
+                constraint: {
+                    stiffness: 0.2,
+                    render: {
+                        visible: false
+                    }
+                }
+            });
+
+        Composite.add(world, mouseConstraint);
+
+
+
+
+
+        // bullets
+
+
+        var rockOptions = {
+                density: 0.004,
+                restitution: 1,
+                firction: 0
+            },
+            rock = Bodies.polygon(150, 230, 20, 15, rockOptions),
+            anchor = {
+                x: 150,
+                y: 230
+            },
+            elastic = Constraint.create({
+                pointA: anchor,
+                bodyB: rock,
+                stiffness: 0.2
+            });
+        let firing = false;
+        Events.on(mouseConstraint, 'enddrag', function(e) {
+            if (e.body === rock) firing = true;
+        });
+
+
+        Events.on(engine, 'afterUpdate', function() {
+
+            if (firing || mouseConstraint.mouse.button === 1 && (rock.position.x > 180 || rock.position.y < 260)) {
+                rock = Bodies.polygon(150, 230, 20, 15, rockOptions);
+
+
+                //here...............................................................
+                Composite.add(engine.world, rock);
+                elastic.bodyB = rock;
+                firing = false;
+
+            }
+        });
+
+
+
+
+
+        //s1======================================================
+        var stack1 = Matter.Composites.stack(650, 100, 20, 20, 0, 1, function(x, y) {
+
+            return Matter.Bodies.polygon(x, y, 4, 10);
+        })
+
+        //s2====================================================================================
+        var stack2 = Matter.Composites.pyramid(610, 130, 19, 15, 0, 0, function(x, y) {
+
+                return Matter.Bodies.polygon(x, y, 4, 15, {
+                    inertia: Infinity
+                });
+            })
+            //castle===================================================================================
+
+        var B1 = Bodies.rectangle(800, 350, 400, 20);
+
+        let B2 = Matter.Composites.stack(645, 210, 37, 1, 0, 0, function(x, y) {
+
+            return Matter.Bodies.rectangle(x, y, 10, 155);
+        })
+
+        var B3 = Bodies.rectangle(800, 180, 400, 20);
+
+
+        var B4 = Matter.Composites.pyramid(630, 0, 13, 10, 1, 0, function(x, y) {
+
+            return Matter.Bodies.polygon(x, y, 8, 14);
+        })
+
+
+        //=================
+        function Stack() {
+
+
+            Composite.remove(engine.world, [stack2, B1, B2, B3, B4]);
+            Composite.add(engine.world, stack1);
+        }
+
+        function Pyramid() {
+
+            Composite.remove(engine.world, [stack1, B1, B2, B3, B4]);
+            Composite.add(engine.world, stack2);
+        }
+
+
+        function Castle() {
+            Composite.remove(engine.world, [stack1, stack2]);
+            Composite.add(engine.world, B1);
+            Composite.add(engine.world, B2);
+            Composite.add(engine.world, B3);
+            Composite.add(engine.world, B4);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // add all of the bodies to the world
+        Composite.add(engine.world, [elastic, anchor, rock, ground, mouseConstraint]);
+
+        // run the renderer
+        Render.run(render);
+
+        // create runner
+        var runner = Runner.create();
+
+        // run the engine
+        Runner.run(runner, engine);
+    </script>
+
+    <div class="buttons">
+
+
+        <button class="b1" onclick="Stack()">
+        <i class="fa fa-square" style="font-size: 50px;"></i>
+    </button>
+        <button class="b2" onclick="Pyramid()">
+        <i class="fa fa-sort-asc" style="font-size: 90px;"></i>
+    </button>
+        <button class="b3" onclick="Castle()">
+        <i class="fa fa-university" style="font-size:48px;color:rgb(252, 252, 252)"></i>
+    </button>
+
+    </div>
+
+</body>
+
+</html>

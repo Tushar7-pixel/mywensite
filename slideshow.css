@@ -61,7 +61,7 @@
 
 .image {
     position: relative;
-    animation: slideimage 3s infinite alternate;
+    animation: slideimage 3s infinite;
     animation-delay: 0s;
 }
 
