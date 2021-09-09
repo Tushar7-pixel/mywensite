@@ -65,18 +65,17 @@ images[2] = "slider-2.jpg";
 images[0] = "slider-3.jpg";
 images[3] = "slider-4.jpg";
 
-setTimeout(() => {
-    // image changing   function
-    setInterval(() => {
-        if (i < images.length) {
-            document.getElementById("i1").src = images[i];
+// image changing   function
+setInterval(() => {
+    if (i < images.length) {
+        document.getElementById("i1").src = images[i];
 
-            i++;
-        } else {
-            i = 0;
-        }
-    }, interval);
-}, 100);
+        i++;
+    } else {
+        i = 0;
+    }
+}, interval);
+
 // mMusic bar Function
 
 function Musicbar() {
