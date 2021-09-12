@@ -5,12 +5,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="musicbox.css">
-    <link rel="stylesheet" href="neon.css">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="slideshow.css">
-    <link rel="stylesheet" href="imodel.css">
-    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="script/musicbox.css">
+    <link rel="stylesheet" href="script/neon.css">
+    <link rel="stylesheet" href="script/form.css">
+    <link rel="stylesheet" href="script/slideshow.css">
+    <link rel="stylesheet" href="script/imodel.css">
+    <link rel="stylesheet" href="script/ui.css">
+    <link rel="stylesheet" href="script/yt-ui.css">
     <!-- <link rel="stylesheet" href="canvas.css"> -->
     <!-- <link rel="stylesheet" href="game1.css"> -->
     <!-- <link rel="stylesheet" href="slider.css"> -->
@@ -98,7 +99,7 @@
         </div>
         <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
 
-            <img src="welcome.jpg" alt="">
+            <img src="media/welcome.jpg" alt="">
 
 
         </div>
@@ -115,7 +116,7 @@
     <div class="d-flex flex-row mt-5 mb-5">
 
         <div class="card ms-2  shadow " style="width: 18rem;">
-            <img src="box-1.png" class="card-img-top" alt="...">
+            <img src="media/box-1.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Slide-Show</h5>
                 <p class="card-text">you have nothing to do just go and see images sliding</p>
@@ -123,7 +124,7 @@
             </div>
         </div>
         <div class="card ms-2 text-white bg-success shadow " style="width: 18rem;">
-            <img src="Box-2.png" class="card-img-top" alt="...">
+            <img src="media/Box-2.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Simple-form</h5>
                 <p class="card-text">Simple Login Form with Ragister page in it, but uou cant se because opacity is 0</p>
@@ -131,7 +132,7 @@
             </div>
         </div>
         <div class="card ms-2 shadow" style="width: 18rem;">
-            <img src="box-3.jpg" class="card-img-top" alt="...">
+            <img src="media/box-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Hover Box</h5>
                 <p class="card-text">Drag your mouse pointer on the box and it will show details with some Animation</p>
@@ -139,7 +140,7 @@
             </div>
         </div>
         <div class="card ms-2 text-white bg-success shadow " style="width: 18rem;">
-            <img src="Box-4.png" class="card-img-top" alt="...">
+            <img src="media/Box-4.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Music Box</h5>
                 <p class="card-text">Best Work here Some Music and Some Animation With Colors</p>
@@ -147,7 +148,7 @@
             </div>
         </div>
         <div class="card ms-2 shadow" style="width: 18rem;">
-            <img src="Box-5.jpg" class="card-img-top" alt="...">
+            <img src="media/Box-5.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Neon-banner</h5>
                 <p class="card-text">Hover to conver simple text to neon text with sound</p>
@@ -155,7 +156,7 @@
             </div>
         </div>
         <div class="card ms-2 text-white bg-success  shadow" style="width: 18rem;">
-            <img src="Box-6.jpg" class="card-img-top" alt="...">
+            <img src="media/Box-6.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Instagram-us</h5>
                 <p class="card-text">its just some shapes-colors and fonts which make it look like it a-little</p>
@@ -326,7 +327,7 @@
                 <div class="bar" id="bar6" style="box-shadow: inset 1px 0px 7px #ff00ff, 0px 2px 7px #03ffe8;"></div>
                 <div class="bar" id="bar7" style="box-shadow: inset 1px 0px 7px #8c00ff, 0px 2px 7px #03ffe8;"></div>
             </div>
-            <audio src="The Rembrandts - I ll Be There For You (Theme From FRIENDS).mp3" controls onplay="Musicbar()" onpause="Musicbar0()"></audio>
+            <audio src="media/The Rembrandts - I ll Be There For You (Theme From FRIENDS).mp3" controls onplay="Musicbar()" onpause="Musicbar0()"></audio>
         </div>
         <button id="mclose"> <li class="fa fa-close"></li></button>
     </div>
@@ -346,7 +347,7 @@
             </div>
             <Button class="iclose" id="cl" style="margin: -87px -3px 18px;"> <li class="fa fa-close"></li></Button>
         </div>
-        <div class="f-audio"><audio src="flikker.mp3" id="f-audio"></audio></div>
+        <div class="f-audio"><audio src="media/flikker.mp3" id="f-audio"></audio></div>
     </div>
 
     <!-- UI -->
@@ -369,28 +370,28 @@
 
                         <div class="status">
                             <div class="status stories" ::-webkit-scrollbar>
-                                <div class="story"><img src="0.jpeg" alt="" width="50px"></div>
+                                <div class="story"><img src="media/0.jpeg" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p1.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p1.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p2.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p2.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p3.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p3.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p5.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p5.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p5.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p5.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p5.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p5.jfif" alt="" width="50px"></div>
                             </div>
                             <div class="status stories">
-                                <div class="story"><img src="p5.jfif" alt="" width="50px"></div>
+                                <div class="story"><img src="media/p5.jfif" alt="" width="50px"></div>
                             </div>
                         </div>
                     </div>
@@ -400,7 +401,7 @@
 
                             <div style="  display:flex;background-color: #fff;">
                                 <div class="stories" style="width: 31px; height: 31px;">
-                                    <div class="story" style="width: 28px;height: 28px; "><img src="0.jpeg" width="31px" style="vertical-align: 0%; align-self:center"></div>
+                                    <div class="story" style="width: 28px;height: 28px; "><img src="media/0.jpeg" width="31px" style="vertical-align: 0%; align-self:center"></div>
 
                                 </div>
                                 <b style=" font-size: 2px; margin: 13px 5px 1px; font-family: Arial, Helvetica, sans-serif; ">S_h_a_r_m_a_j_i_17</b>
@@ -408,7 +409,7 @@
                             </div>
 
                             <div class="img" style="height: 241px;">
-                                <img src="tushar.jpg" width="240px">
+                                <img src="media/tushar.jpg" width="240px">
                             </div>
 
                             <div class="ibuttons">
@@ -427,7 +428,7 @@
 
                             <div style="  display:flex;background-color: #fff;">
                                 <div class="stories" style="width: 31px; height: 31px;">
-                                    <div class="story" style="width: 25px;height: 25px; "><img src="p2.jfif" width="29px"></div>
+                                    <div class="story" style="width: 25px;height: 25px; "><img src="media/p2.jfif" width="29px"></div>
 
                                 </div>
                                 <b style=" font-size: 2px; margin: 13px 5px 1px; font-family: Arial, Helvetica, sans-serif; ">U_S_E_R2</b>
@@ -435,7 +436,7 @@
                             </div>
 
                             <div class="img" style="height: 168px;">
-                                <img src="3.jpg" alt="" width="240px">
+                                <img src="media/3.jpg" alt="" width="240px">
                             </div>
 
                             <div class="ibuttons">
@@ -471,11 +472,11 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="G.jpg" height="600px" class="d-block w-100" alt="...">
+                    <img src="media/G.jpg" height="600px" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
 
                         <div class="card text-light bg-transparent" style="width: 18rem; margin-left: 450px ; margin-bottom: 140px;">
-                            <img src="G1.png" class="card-img-top" alt="...">
+                            <img src="media/G1.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Sling-Shot</h5>
                                 <p class="card-text">Simple Sling Shot Game. Each button render object one time.<b>"Strach Ball-Sling and PLAY"</b></p>
@@ -485,13 +486,13 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="G3.jpg" height="600px" class="d-block w-100" alt="...">
+                    <img src="media/G3.jpg" height="600px" class="d-block w-100" alt="...">
 
 
                     <div class="carousel-caption d-none d-md-block">
 
                         <div class="card text-light bg-primary " style="width: 18rem;  margin-left: 450px ; margin-bottom: 40px;">
-                            <img src="G2.png" class="card-img-top" alt="...">
+                            <img src="media/G2.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title fs-3">Plinko</h5>
                                 <p class="card-text  "> It is Plinko game. you can click or strach the ball on the top. <b>hope for ball to go in red box</b></p>
@@ -521,6 +522,425 @@
         </div>
 
     </div>
+
+
+    <!-- ===========================================================================UI============================================================== -->
+
+
+    <center>
+        <h1><span class="badge bg-danger">You</span>tube UI Light/Dark Theme</h1>
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Design</strong>
+                    <h3 class="mb-0">Youtube UI</h3>
+                    <div class="mb-1 text-muted">Mobile</div>
+                    <p class="card-text mb-auto">Light and Dark Mode.</p>
+                    <div class="mb-1 text-muted">Combination of some Icons and Fonts and Programed with JS makes it look like little same as Youtube. </div>
+                    <center>
+                        <button type="button" id="open-ytu" class="btn btn-primary">Open-UI</button>
+                    </center>
+
+                </div>
+                <div class="col-auto d-none d-lg-block ">
+                    <img src="media/D&V.png" style="width: 220px;" alt="">
+                </div>
+            </div>
+        </div>
+
+    </center>
+
+
+
+    <!-- ================================================== UI here  =========================================================-->
+
+
+    <div class="to-open" id="to-open">
+
+        <div class="container text-dark bg-light  border border-3 border-danger overflow-hidden" id="all" style="border-radius: 25px; width: 300px;  height: 550px; padding: 0;">
+
+            <div class="nav-container">
+
+
+                <div class="yt-nav">
+
+                    <div class="yt-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="122 " xml:space="preserve" y="0" x="0" id="Layer_1" version="1.1" viewBox="-57.15 -21.25 495.3 127.5"><style id="style7427" type="text/css">.st2{fill:#282828}</style><g id="g7433"><path id="path7429" d="M118.9 13.3c-1.4-5.2-5.5-9.3-10.7-10.7C98.7 0 60.7 0 60.7 0s-38 0-47.5 2.5C8.1 3.9 3.9 8.1 2.5 13.3 0 22.8 0 42.5 0 42.5s0 19.8 2.5 29.2C3.9 76.9 8 81 13.2 82.4 22.8 85 60.7 85 60.7 85s38 0 47.5-2.5c5.2-1.4 9.3-5.5 10.7-10.7 2.5-9.5 2.5-29.2 2.5-29.2s.1-19.8-2.5-29.3z" fill="red"/><path id="polygon7431" fill="#fff" d="M48.6 24.3v36.4l31.6-18.2z"/></g><g id="g7451"><g id="g7449"><path id="path7435" d="M176.3 77.4c-2.4-1.6-4.1-4.1-5.1-7.6-1-3.4-1.5-8-1.5-13.6v-7.7c0-5.7.6-10.3 1.7-13.8 1.2-3.5 3-6 5.4-7.6 2.5-1.6 5.7-2.4 9.7-2.4 3.9 0 7.1.8 9.5 2.4 2.4 1.6 4.1 4.2 5.2 7.6 1.1 3.4 1.7 8 1.7 13.8v7.7c0 5.7-.5 10.2-1.6 13.7-1.1 3.4-2.8 6-5.2 7.6-2.4 1.6-5.7 2.4-9.8 2.4-4.2-.1-7.6-.9-10-2.5zm13.5-8.4c.7-1.7 1-4.6 1-8.5V43.9c0-3.8-.3-6.6-1-8.4-.7-1.8-1.8-2.6-3.5-2.6-1.6 0-2.8.9-3.4 2.6-.7 1.8-1 4.6-1 8.4v16.6c0 3.9.3 6.8 1 8.5.6 1.7 1.8 2.6 3.5 2.6 1.6 0 2.7-.8 3.4-2.6z" class="st2"/><path id="path7437" d="M360.9 56.3V59c0 3.4.1 6 .3 7.7.2 1.7.6 3 1.3 3.7.6.8 1.6 1.2 3 1.2 1.8 0 3-.7 3.7-2.1.7-1.4 1-3.7 1.1-7l10.3.6c.1.5.1 1.1.1 1.9 0 4.9-1.3 8.6-4 11-2.7 2.4-6.5 3.6-11.4 3.6-5.9 0-10-1.9-12.4-5.6-2.4-3.7-3.6-9.4-3.6-17.2v-9.3c0-8 1.2-13.8 3.7-17.5 2.5-3.7 6.7-5.5 12.6-5.5 4.1 0 7.3.8 9.5 2.3 2.2 1.5 3.7 3.9 4.6 7 .9 3.2 1.3 7.6 1.3 13.2v9.1h-20.1zm1.5-22.4c-.6.8-1 2-1.2 3.7-.2 1.7-.3 4.3-.3 7.8v3.8h8.8v-3.8c0-3.4-.1-6-.3-7.8-.2-1.8-.7-3-1.3-3.7-.6-.7-1.6-1.1-2.8-1.1-1.4-.1-2.3.3-2.9 1.1z" class="st2"/><path id="path7439" d="M147.1 55.3L133.5 6h11.9l4.8 22.3c1.2 5.5 2.1 10.2 2.7 14.1h.3c.4-2.8 1.3-7.4 2.7-14l5-22.4h11.9L159 55.3v23.6h-11.8V55.3z" class="st2"/><path id="path7441" d="M241.6 25.7V79h-9.4l-1-6.5h-.3c-2.5 4.9-6.4 7.4-11.5 7.4-3.5 0-6.1-1.2-7.8-3.5-1.7-2.3-2.5-5.9-2.5-10.9V25.7h12v39.1c0 2.4.3 4.1.8 5.1s1.4 1.5 2.6 1.5c1 0 2-.3 3-1 1-.6 1.7-1.4 2.1-2.4V25.7z" class="st2"/><path id="path7443" d="M303.1 25.7V79h-9.4l-1-6.5h-.3c-2.5 4.9-6.4 7.4-11.5 7.4-3.5 0-6.1-1.2-7.8-3.5-1.7-2.3-2.5-5.9-2.5-10.9V25.7h12v39.1c0 2.4.3 4.1.8 5.1s1.4 1.5 2.6 1.5c1 0 2-.3 3-1 1-.6 1.7-1.4 2.1-2.4V25.7z" class="st2"/><path id="path7445" d="M274.2 15.7h-11.9v63.2h-11.7V15.7h-11.9V6h35.5z" class="st2"/><path id="path7447" d="M342.8 34.2c-.7-3.4-1.9-5.8-3.5-7.3s-3.9-2.3-6.7-2.3c-2.2 0-4.3.6-6.2 1.9-1.9 1.2-3.4 2.9-4.4 4.9h-.1V3.3h-11.6v75.6h9.9l1.2-5h.3c.9 1.8 2.3 3.2 4.2 4.3 1.9 1 3.9 1.6 6.2 1.6 4.1 0 7-1.9 8.9-5.6 1.9-3.7 2.9-9.6 2.9-17.5v-8.4c-.1-6.1-.4-10.8-1.1-14.1zm-11 21.7c0 3.9-.2 6.9-.5 9.1-.3 2.2-.9 3.8-1.6 4.7-.8.9-1.8 1.4-3 1.4-1 0-1.9-.2-2.7-.7-.8-.5-1.5-1.2-2-2.1V38.1c.4-1.4 1.1-2.6 2.1-3.6 1-.9 2.1-1.4 3.2-1.4 1.2 0 2.2.5 2.8 1.4.7 1 1.1 2.6 1.4 4.8.3 2.3.4 5.5.4 9.6v7z" class="st2"/></g></g></svg>
+                    </div>
+
+                    <i class="fa fa-video-camera" style="margin: 9px 5px; float:right;"></i>
+                    <i class="fa fa-search" style="margin: 9px 5px; float:right;"></i>
+                    <i class="fa fa-user-circle-o" style="margin: 9px 5px; float:right;"></i>
+                </div>
+
+
+            </div>
+
+            <div class="mainmenu" id="before">
+
+                <div class="sgn  d-flex w-m overflow-scroll">
+                    <span style="width: fit-content;" class="btn btn-outline-secondary m-1  mt-0 mb-0 btn-sm p-1 pt-0 pb-0 btn-font-size-sm rounded-pill">Music</span>
+                    <span style="width: fit-content;" class="btn btn-outline-secondary m-1  mt-0 mb-0 btn-sm p-1 pt-0 pb-0 btn-font-size-sm rounded-pill">Streams</span>
+                    <span style="width: fit-content;" class="btn btn-outline-secondary m-1  mt-0 mb-0 btn-sm p-1 pt-0 pb-0 btn-font-size-sm rounded-pill">Chess</span>
+                    <span style="width: fit-content;" class="btn btn-outline-secondary m-1  mt-0 mb-0 btn-sm p-1 pt-0 pb-0 btn-font-size-sm rounded-pill">Physics</span>
+                    <span style="width: fit-content;" class="btn btn-outline-secondary m-1  mt-0 mb-0 btn-sm p-1 pt-0 pb-0 btn-font-size-sm rounded-pill">Games</span>
+                </div>
+
+
+
+
+                <div class="p-1 mb-0" role="button" onclick="plays()">
+
+                    <div class="ratio ratio-16x9 m-0" id="vc1">
+
+                        <img src="media/V-1.jpg" id="vid-1" style="z-index: 2; border-radius: 5px;" onclick="v1()">
+                        <video src="media/SM.mp4" id="hvid-1" style="z-index:1;  border-radius: 5px;"></video>
+                    </div>
+
+                    <div class=" d-flex mb-0" style="height: fit-content ">
+
+                        <img src="media/Sony-p.png" class="shadow" alt="Avatar" style="border-radius:50%; width: 35px; height: 35px; margin: 21px 12px; ">
+                        <a style="font-size: 15px;"> SPIDER-MAN: NO WAY HOME - Official Teaser Trailer (HD)
+                            <p class="text-muted m-0" style="font-size:xx-small;">Sony Pictures Entertainment · 64M views ·2 weeks ago </p>
+                        </a>
+                    </div>
+                    <hr class="m-0">
+                </div>
+
+
+                <div class="p-1 mb-0" role="button" onclick="playf()">
+
+
+                    <div class="ratio ratio-16x9 rounded-top m-0" id="vc2">
+
+                        <img src="media/V-2.jpg" id="vid-2" style="z-index: 2; border-radius: 5px;" alt="">
+                        <video src="media/FD.mp4" id="hvid-2" style="z-index:1; border-radius: 5px;"></video>
+                    </div>
+
+                    <div class=" d-flex mb-0 " style="height: fit-content;">
+
+                        <img src="media/WB.jfif" class="shadow-lg" alt="Avatar" style="border-radius:50%; width: 35px; height: 35px; margin: 21px 12px; ">
+                        <a style="font-size: 15px;">
+                            Friends: Best Moments From Season 2 (Mashup) | TBS 
+                            <p class="text-muted m-0" style="font-size:xx-small;">TBS · 21M views · 1year ago</p>
+                        </a>
+                    </div>
+                    <hr class="m-0">
+                </div>
+
+
+                <div class="  p-1 mb-0" role="button">
+
+                    <div class="ratio ratio-16x9 rounded-top m-0" id="vc3">
+
+                        <img src="media/v-3.jpg" id="vid-3" style="z-index: 2; border-radius: 5px;" alt="">
+                        <video src="media/BBT.mp4" id="hvid-3" style="z-index:1 ;border-radius: 5px; "></video>
+                    </div>
+
+                    <div class=" d-flex mb-0 " style="height: fit-content;">
+
+                        <img src="media/WB.jfif" class="shadow-lg" alt="Avatar" style="border-radius:50%; width: 35px; height: 35px; margin: 21px 12px; ">
+                        <a style="font-size: 15px;">
+                            Big Bang Theory I Best of Season 1 
+                            <p class="text-muted m-0" style="font-size:xx-small;">Warner Bros ·1.3M views · 1year ago</p>
+                        </a>
+                    </div>
+                    <hr class="m-0">
+                </div>
+
+
+
+
+                <div class="  p-1 mb-0" role="button">
+
+                    <div class="ratio ratio-16x9 rounded-top m-0" id="vc4">
+
+                        <img src="media/v-4.jpg" style="z-index: 2; border-radius: 5px;" id="vid-4" alt="">
+                        <video src="media/VN.mp4" id="hvid-4" style="z-index:1; border-radius: 5px;"></video>
+                    </div>
+
+
+                    <div class=" d-flex mb-0 " style="height: fit-content;">
+
+                        <img src="media/marvel.jfif" class="shadow-lg" alt="Avatar" style="border-radius:50%; width: 35px; height: 35px; margin: 21px 12px; ">
+                        <a style="font-size: 15px;">
+                            VENOM: LET THERE BE CARNAGE - Official Trailer 2 (HD) 
+                            <p class="text-muted m-0" style="font-size:xx-small;">Marvel India ·1.3M views · 1year ago</p>
+                        </a>
+                    </div>
+                    <hr class="m-0">
+                </div>
+                <center>
+
+                    <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </ce nter>
+            </div>
+
+            <!-- ===================================================================================================================================================================================================== -->
+
+
+
+
+            <div class="mainmenu2" id="onply" style="opacity: unset; pointer-events: none;">
+
+                <div class="play ratio ratio-16x9">
+
+                    <iframe src="https://www.youtube.com/embed/ggZkZK-9Pm4?start=85&showinfo=0&rel=0&fs=0" width="560" height="315" frameborder="0"></iframe>
+                </div>
+
+
+                <div class="content">
+
+                    <a href="#" style="font-size: x-small;">#Chandler</a> <a href="#" style="font-size: x-small;">#Rachel</a> <a href="#" style="font-size: x-small;">#Friends</a>
+                    <br>
+                    <a style="font-size: 15px;">Friends: Best Moments of Season 1 to Binge at Home | TBS
+                            <p class="text-muted m-0" style="font-size:xx-small;">TBS · 64M views ·2 weeks ago </p>
+                        </a>
+
+                    <div class=" d-flex">
+
+                        <svg id="g6" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%; margin:5px 20px; "><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g7" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px; "><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g8" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px; "><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M15,5.63L20.66,12L15,18.37V15v-1h-1c-3.96,0-7.14,1-9.75,3.09c1.84-4.07,5.11-6.4,9.89-7.1L15,9.86V9V5.63 M14,3v6 C6.22,10.13,3.11,15.33,2,21c2.78-3.97,6.44-6,12-6v6l8-9L14,3L14,3z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g9" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px;"><g class="style-scope yt-icon"><path d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g10" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%; margin:5px 20px; "><g class="style-scope yt-icon"><path d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z" class="style-scope yt-icon"></path></g></svg>
+                    </div>
+                </div>
+                <hr class="m-0">
+                <div style="display: flex; flex-direction: column; overflow: scroll;" class="suggessions-c">
+
+
+                    <div class="sub d-flex m-0" style="height: 40px;">
+
+
+                        <img src="media/TBS.jpg" class="shadow" alt="Avatar" style="border-radius:50%; width: 28px; height: 28px; margin: 4px 10px 0px 5px; ">
+
+                        <p class="mt-1 mb-1">TBS</p>
+
+                        <button id="ytbtn" style="margin: 4px 5px 5px 105px">SUBSCRIBE</button>
+
+
+                    </div>
+
+                    <hr class="m-0">
+
+
+
+                    <!-- /////////////////////////////////////////////////////////////////sug\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+
+
+
+
+
+
+                    <div class="suggessions d-flex mt-1  ">
+
+                        <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                        <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                            <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                            <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                        </p>
+
+
+                    </div>
+
+
+
+
+                    <div class="suggessions d-flex mt-1 ">
+
+                        <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                        <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                            <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                            <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                        </p>
+
+
+                    </div>
+
+                    <div class="suggessions d-flex mt-1">
+
+                        <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                        <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                            <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                            <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- ==================================================================== SM=================================================== -->
+
+            <div class="mainmenu2" id="onply1" style="opacity: unset; pointer-events: none;">
+                <div class="play ratio ratio-16x9">
+
+                    <iframe src="https://www.youtube.com/embed/rt-2cxAiPJk?rel=0&fs=0" width="560" height="315" frameborder="0"></iframe>
+
+
+                </div>
+
+
+                <div class="content">
+
+                    <a href="#" style="font-size: x-small;">#marvel</a> <a href="#" style="font-size: x-small;">#heros</a> <a href="#" style="font-size: x-small;">#spiderman</a>
+                    <br>
+                    <a style="font-size: 15px;"> SPIDER-MAN: NO WAY HOME - Official Teaser Trailer (HD)
+                            <p class="text-muted m-0" style="font-size:xx-small;">Sony Pictures Entertainment · 64M views ·2 weeks ago </p>
+                        </a>
+
+                    <div class=" d-flex">
+
+                        <svg id="g1" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%; margin:5px 20px; "><g class="style-scope yt-icon"><path d="M18.77,11h-4.23l1.52-4.94C16.38,5.03,15.54,4,14.38,4c-0.58,0-1.14,0.24-1.52,0.65L7,11H3v10h4h1h9.43 c1.06,0,1.98-0.67,2.19-1.61l1.34-6C21.23,12.15,20.18,11,18.77,11z M7,20H4v-8h3V20z M19.98,13.17l-1.34,6 C18.54,19.65,18.03,20,17.43,20H8v-8.61l5.6-6.06C13.79,5.12,14.08,5,14.38,5c0.26,0,0.5,0.11,0.63,0.3 c0.07,0.1,0.15,0.26,0.09,0.47l-1.52,4.94L13.18,12h1.35h4.23c0.41,0,0.8,0.17,1.03,0.46C19.92,12.61,20.05,12.86,19.98,13.17z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g2" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px; "><g class="style-scope yt-icon"><path d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g3" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px; "><g mirror-in-rtl="" class="style-scope yt-icon"><path d="M15,5.63L20.66,12L15,18.37V15v-1h-1c-3.96,0-7.14,1-9.75,3.09c1.84-4.07,5.11-6.4,9.89-7.1L15,9.86V9V5.63 M14,3v6 C6.22,10.13,3.11,15.33,2,21c2.78-3.97,6.44-6,12-6v6l8-9L14,3L14,3z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g4" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%;  margin:5px 20px;"><g class="style-scope yt-icon"><path d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z" class="style-scope yt-icon"></path></g></svg>
+                        <svg id="g5" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width:8%; margin:5px 20px; "><g class="style-scope yt-icon"><path d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z" class="style-scope yt-icon"></path></g></svg>
+                    </div>
+                </div>
+                <hr class="m-0">
+            </div>
+            <div style="display: flex; flex-direction: column; overflow: scroll;" class="suggessions-c">
+
+
+                <div class="sub d-flex m-0" style="height: 40px;">
+
+
+                    <img src="media/Sony-p.png" class="shadow" alt="Avatar" style="border-radius:50%; width: 28px; height: 28px; margin: 4px 10px 0px 5px; ">
+
+                    <p class="mt-1 mb-1">Sony Pictures</p>
+
+                    <button id="ytbtn">SUBSCRIBE</button>
+
+
+                </div>
+
+                <hr class="m-0">
+
+
+
+                <!-- /////////////////////////////////////////////////////////////////sug\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+
+
+
+
+
+
+                <div class="suggessions d-flex mt-1  ">
+
+                    <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                    <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                        <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                        <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                    </p>
+
+
+                </div>
+
+
+
+
+                <div class="suggessions d-flex mt-1 ">
+
+                    <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                    <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                        <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                        <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                    </p>
+
+
+                </div>
+
+                <div class="suggessions d-flex mt-1">
+
+                    <img src="media/loadingimg.png" alt="" style="width: 100px;">
+                    <p class="placeholder-glow mr-5 " style="margin: 0 7px 0; padding: 0; height: 50px;   width: 168px;">
+
+                        <span class=" placeholder  col-12     placeholder-xs m-0 "></span>
+                        <span class="placeholder   col-8    placeholder-xs m-0 "></span>
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <center>
+            <button type="button" class="btn btn-outline-danger" onclick="cloosevideo()"> < </button>
+            <button type="button" class="btn btn-dark" onclick="toDark()"><i class="fa fa-moon-o"></i></button>
+            <button type="button" class="btn btn-light" onclick="tolight()"><i class="fa fa-sun-o"></i></button>
+            <button type="button" class="btn btn-warning " id="shutdown"><i class="fa fa-close"></i></button>
+        </center>
+
+
+
+        <script src="script/yt.js"></script>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -556,7 +976,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="script/index.js"></script>
+    <script src="script/yt.js"></script>
 
 </body>
 

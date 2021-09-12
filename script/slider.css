@@ -1,0 +1,201 @@
+.slider-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: flex;
+}
+
+.slider-box {
+    left: 0px;
+    right: 0;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-img {
+    align-self: center;
+    position: relative;
+    left: 0px;
+    right: 0;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#slide-img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.slider-img.slide {
+    padding: 0 100px;
+    width: 100vw;
+    animation: slide-l 1s linear;
+}
+
+
+/* .slide-r {
+    animation: slide-r 1s;
+} */
+
+@keyframes slide-l {
+    0% {
+        filter: url(#blur0);
+        opacity: 1;
+        left: 0;
+        /* scale: 1 1; */
+        /* filter: blur(0px); */
+        /* transform: scale(1, 1); */
+    }
+    20% {
+        filter: url(#blur3);
+        opacity: 1;
+        /* scale: 1.2 0.8; */
+        /* left: 0; */
+        /* filter: blur(0px); */
+        /* transform: scale(1, 1); */
+    }
+    50% {
+        /* transform: scale(1.3, 0.7); */
+        filter: url(#blur5);
+        opacity: 1;
+        left: -1000px;
+        /* scale: 1.3 0.7; */
+    }
+    51% {
+        /* transform: scale(1.3, 0.7); */
+        filter: url(#blur5);
+        opacity: 0;
+        right: -1000px;
+        left: 1000px;
+    }
+    70% {
+        /* transform: scale(1.3, 0.7); */
+        filter: url(#blur3);
+        /* opacity: 0; */
+        /* right: -1000px; */
+        /* left: 1000px; */
+    }
+    100% {
+        opacity: 1;
+        filter: url(#blur0);
+        right: 0;
+        left: 0;
+        /* scale: 1 1; */
+        /* filter: blur(0px); */
+        /* transform: scale(1, 1); */
+    }
+}
+
+.slide-btn-l {
+    width: 30px;
+    height: 60px;
+    margin: 0px 19px;
+    float: left;
+    border: solid 2px blue;
+    border-radius: 5px;
+    background: #000000;
+    color: #e4e4e9;
+    font-size: 30px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.slide-btn-r {
+    width: 30px;
+    height: 60px;
+    margin: 0px 19px;
+    float: right;
+    border: solid 2px blue;
+    border-radius: 5px;
+    background: #000000;
+    color: #e4e4e9;
+    font-size: 30px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* @keyframes slide-r {
+    0% {
+        right: 0;
+        filter: blur(5px);
+        transform: scale(1, 0.98);
+    }
+    6% {
+        filter: blur(5px);
+        transform: scale(1, 0.96);
+    }
+    12% {
+        filter: blur(5px);
+        transform: scale(1, 0.94);
+    }
+    18% {
+        filter: blur(5px);
+        transform: scale(1.1, 0.92);
+    }
+    24% {
+        filter: blur(5px);
+        transform: scale(1.1, 0.9);
+    }
+    30% {
+        filter: blur(5px);
+        transform: scale(1.2, 0.88);
+    }
+    36% {
+        filter: blur(5px);
+        transform: scale(1.3, 0.86);
+    }
+    42% {
+        filter: blur(5px);
+        transform: scale(1.35, 0.85);
+    }
+    48% {
+        filter: blur(5px);
+        transform: scale(1.3, 0.86);
+    }
+    54% {
+        filter: blur(5px);
+        transform: scale(1.2, 0.88);
+    }
+    60% {
+        filter: blur(4px);
+        transform: scale(1.1, 0.9);
+    }
+    66% {
+        filter: blur(3px);
+        transform: scale(1.1, 0.92);
+    }
+    72% {
+        filter: blur(2px);
+        transform: scale(1, 0.94);
+    }
+    78% {
+        right: -400px;
+        filter: blur(1px);
+        transform: scale(1, 0.96);
+    }
+    90% {
+        right: -600px;
+        filter: blur(0px);
+        transform: scale(1, 0.98);
+    }
+    100% {
+        right: -800px;
+        filter: blur(0px);
+        transform: scale(1, 0.98);
+    }
+} */
